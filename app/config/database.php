@@ -52,12 +52,23 @@ return array(
 			'prefix'   => '',
 		),
 
+//		'mysql' => array(
+//			'driver'    => 'mysql',
+//			'host'      => 'localhost',
+//			'database'  => 'super_db',
+//			'username'  => 'super_admin',
+//			'password'  => 't9y9N73YZq',
+//			'charset'   => 'utf8',
+//			'collation' => 'utf8_unicode_ci',
+//			'prefix'    => '',
+//		),
+
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'super_db',
-			'username'  => 'super_admin',
-			'password'  => 't9y9N73YZq',
+			'database'  => 'superstalling',
+			'username'  => 'superstalling',
+			'password'  => 'superstalling',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
