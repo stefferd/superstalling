@@ -65,10 +65,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
+			'host'      => '188.166.26.136',
 			'database'  => 'superstalling',
-			'username'  => 'superstalling',
-			'password'  => 'superstalling',
+			'username'  => 'forge',
+			'password'  => 'EKsKV72dH50MVQn5p1da',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
