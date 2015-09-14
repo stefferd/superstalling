@@ -5,7 +5,6 @@ backup
 prototype
 _ide_helper.php
 artisan
-composer.lock
 composer.phar
 CONTRIBUTING.md
 index.html
