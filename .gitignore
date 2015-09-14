@@ -1,0 +1,16 @@
+.idea
+vendor
+log
+backup
+prototype
+_ide_helper.php
+artisan
+composer.lock
+composer.phar
+CONTRIBUTING.md
+index.html
+laravel.log
+npm-debug.log
+phpinfo.php
+phpunit.xml
+server.php
