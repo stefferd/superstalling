@@ -4,8 +4,8 @@
 <title>@yield('meta') | {{ Config::get('statics.customer') }}</title>
 <meta name="description" content="{{ Config::get('statics.customer') }} | @yield('description')" />
 <meta name="robots" content="index, follow" />
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
+<link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/public/apple-touch-icon-precomposed.png">
 <meta property="og:title"  content="@yield('meta') | {{ Config::get('statics.customer') }} | The place to buy classic cars" />
 <meta property="og:image"  content="http://www.superstalling.nl/assets/img/1@2x.jpg" />
 <meta property="og:description"  content="{{ Config::get('statics.customer') }} | @yield('description')" />
