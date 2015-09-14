@@ -4,7 +4,6 @@ log
 backup
 prototype
 _ide_helper.php
-artisan
 composer.phar
 CONTRIBUTING.md
 index.html
