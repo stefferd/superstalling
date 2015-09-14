@@ -1,0 +1,1 @@
+<footer class="copyright text-right">Copyright &copy Stef van den Berg</footer>
