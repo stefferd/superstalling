@@ -7697,8 +7697,8 @@ body:not(.home) .carousel-inner {
   height: 380px;
 }
 
-body:not(.home) .container {
-  top: auto;
+body:not(.home) > .container {
+  top: 0;
   margin-top: -280px;
   margin-bottom: 0;
 }
