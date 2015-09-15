@@ -108,7 +108,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="{{ URL::asset('assets/img/1@2x.jpg') }}" height="540">
+                    <img src="{{ URL::asset('assets/img/2@2x.jpg') }}" height="540">
                 </div>
             </div>
         </div>
