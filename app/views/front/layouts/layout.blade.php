@@ -101,14 +101,10 @@
             </div><!-- /.row -->
         </div>
     @else
-        <div id="myCarousel" class="carousel slide">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            </ol>
+        <div id="myCarousel" class="carousel">
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="{{ URL::asset('assets/img/2@2x.jpg') }}" height="540">
+                    <img src="{{ URL::asset('assets/img/2@2x.jpg') }}" height="300">
                 </div>
             </div>
         </div>
