@@ -33,4 +33,5 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeDialogTabs = 'link:advanced';
 
 	config.extraPlugins = 'sourcedialog';
+	config.allowedContent = true;
 };
