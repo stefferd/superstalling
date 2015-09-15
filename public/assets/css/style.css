@@ -7694,11 +7694,10 @@ td.visible-print {
 }
 
 body:not(.Home) .carousel-inner {
-  height: 380px;
+  height: 280px;
 }
 
 body:not(.Home) > .container {
-  top: 0;
-  margin-top: -203px;
-  margin-bottom: 0;
+  top: -203px;
+  margin-bottom: -203px;
 }
