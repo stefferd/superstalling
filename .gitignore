@@ -12,3 +12,4 @@ npm-debug.log
 phpinfo.php
 phpunit.xml
 server.php
+public/assets/js/ckeditor/samples
