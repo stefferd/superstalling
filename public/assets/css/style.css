@@ -7693,11 +7693,11 @@ td.visible-print {
   }
 }
 
-body:not(.home) .carousel-inner {
+body:not(.Home) .carousel-inner {
   height: 380px;
 }
 
-body:not(.home) > .container {
+body:not(.Home) > .container {
   top: 0;
   margin-top: -203px;
   margin-bottom: 0;
