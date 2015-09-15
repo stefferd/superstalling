@@ -7692,3 +7692,13 @@ td.visible-print {
     display: none !important;
   }
 }
+
+body:not(.home) .carousel-inner {
+  height: 380px;
+}
+
+body:not(.home) .container {
+  top: auto;
+  margin-top: -280px;
+  margin-bottom: 0;
+}
