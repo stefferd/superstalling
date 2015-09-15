@@ -50,7 +50,7 @@ var CKBUILDER_CONFIG = {
 		'tests'
 	],
 	plugins : {
-		'SimpleImage' : 1,
+		'SimpleImage' : 0,
 		'about' : 1,
 		'base64image' : 1,
 		'basicstyles' : 1,
@@ -63,7 +63,8 @@ var CKBUILDER_CONFIG = {
 		'list' : 1,
 		'toolbar' : 1,
 		'undo' : 1,
-		'wysiwygarea' : 1
+		'wysiwygarea' : 1,
+		'sourcedialog': 1
 	},
 	languages : {
 		'en' : 1,
