@@ -81,6 +81,13 @@ Route::group(['prefix' => 'admin', 'before' => 'auth'], function() {
         Route::get('/{id}/edit/', ['as' => 'admin.settings.edit', 'uses' => 'SettingsController@edit']);
         Route::post('/{id}/edit/', ['as' => 'admin.settings.update', 'uses' => 'SettingsController@update']);
     });
+
+    /* Admin : offer */
+    Route::group(['prefix' => 'offer'], function() {
+        Route::get('/', ['as' => 'admin.offer.index', 'uses' => 'OfferController@index']);
+        Route::get('/{id}/edit/', ['as' => 'admin.offer.edit', 'uses' => 'OfferController@edit']);
+        Route::post('/{id}/edit/', ['as' => 'admin.offer.update', 'uses' => 'OfferController@update']);
+    });
 });
 
 //Route::get('/install', function() {

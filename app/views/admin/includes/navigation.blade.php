@@ -15,6 +15,9 @@
             {{--<li><a href="{{ URL::route('admin.newsletter.index') }}">{{ Lang::get('newsletter.menu') }}</a></li>--}}
             {{--<li><a href="{{ URL::route('admin.subscriber.index') }}">{{ Lang::get('subscriber.menu') }}</a></li>--}}
             <li>
+                <a href="{{ URL::route('admin.offer.index') }}">{{ Lang::get('offer.menu') }}</a>
+            </li>
+            <li>
                 <a href="{{ URL::route('admin.settings.index') }}">{{ Lang::get('settings.menu') }}</a>
             </li>
         </ul>

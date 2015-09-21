@@ -9,6 +9,10 @@ h1 {
     color: #CDCDCD;
 }
 
+a {
+    cursor: pointer;
+}
+
 .login-box {
     border: 1px solid #CDCDCD;
     background: #FFF;
