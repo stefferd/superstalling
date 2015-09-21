@@ -1,6 +1,8 @@
 @extends('admin.layouts.layout')
 
-@section('title')login@stop
+@section('title')
+    login
+@stop
 
 @section('content')
     <div class="container">
