@@ -1,5 +1,7 @@
 @extends('admin.layouts.layout')
 
+@section('title')login@stop
+
 @section('content')
     <div class="container">
         <div class="row">
@@ -8,9 +10,13 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <h1>Inloggen</h1>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-xs-12 col-md-6 col-md-offset-3 login-box">
                 {{ Form::open(array('route' => 'admin.authenticate')) }}
-                    <h2>Inloggen</h2>
                     <div class="form-group">
                         {{ $errors->first('email') }}
                         {{ $errors->first('password') }}
