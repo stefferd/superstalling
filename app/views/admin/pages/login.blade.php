@@ -1,8 +1,6 @@
 @extends('admin.layouts.layout')
 
-@section('title')
-    login
-@stop
+@define $title = login
 
 @section('content')
     <div class="container">
