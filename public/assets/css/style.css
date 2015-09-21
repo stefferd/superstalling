@@ -4955,7 +4955,7 @@ input[type="button"].btn-block {
 /* line 520, ../sass/_navbar.scss */
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
   color: white;
-  background-color: #090909;
+  background-color: #868B94;
 }
 /* line 528, ../sass/_navbar.scss */
 .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
@@ -6013,6 +6013,10 @@ img {
   }
   .navbar-inverse .navbar-nav > li > a {
     color: #FFF;
+  }
+  .navbar-inverse .navbar-nav > li > a:hover {
+    color: #868B94;
+    background: #FFF;
   }
   /* line 42, ../sass/_main.scss */
   .navbar-inverse.sticky {
