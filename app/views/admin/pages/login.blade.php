@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-md-6 col-md-offset-3" style="text-align: center; margin-top: 50px;">
+            <div class="col-xs-12 col-md-6 col-md-offset-3" style="text-align: center; margin-top: 50px; margin-bottom: 20px;">
                 <img src="{{ URL::asset('assets/img/DEB-Media-logo-wit.png') }}" style="margin: 0 auto; text-align: center;" />
             </div>
         </div>
