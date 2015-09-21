@@ -1,6 +1,6 @@
 <?php
 
-class SettingsController extends BaseController {
+class OfferController extends BaseController {
 
     public function index() {
         $settings = Settings::all();
