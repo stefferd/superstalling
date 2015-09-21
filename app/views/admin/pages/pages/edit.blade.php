@@ -24,6 +24,10 @@
             {{ Form::textarea('content', null, array('placeholder' => 'Inhoud van de pagina', 'class' => 'form-control', 'id' => 'ckeditor')) }}
             {{ $errors->first('content') }}
         </div>
+        <div class="form-group">
+            {{ Form::button(Lang::get('admin.action_save'), array('class' => 'btn btn-primary', 'type' => 'submit')) }}
+            <a href="{{ URL::route('admin.pages.index') }}">{{ Lang::get('admin.action_cancel') }}</a>
+        </div>
     </div>
     <div class="panel-right">
         <h2><span class="close">X</span> Meta data</h2>
@@ -46,10 +50,6 @@
             {{ Form::label('description', Lang::get('pages.description'), array('class' => 'control-label')) }}
             {{ Form::text('description', null, array('placeholder' => 'Korte pagina omschrijving...', 'class' => 'form-control')) }}
             {{ $errors->first('description') }}
-        </div>
-        <div class="form-group">
-            {{ Form::button(Lang::get('admin.action_save'), array('class' => 'btn btn-primary', 'type' => 'submit')) }}
-            <a href="{{ URL::route('admin.pages.index') }}">{{ Lang::get('admin.action_cancel') }}</a>
         </div>
     </div>
     {{ Form::close() }}
