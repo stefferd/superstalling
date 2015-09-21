@@ -12,6 +12,9 @@
     {{ Form::model($page, array('route' => array('admin.pages.update', $page->id))) }}
     <div class="col-xs-12">
         <div class="form-group">
+            <a class="open">Edit meta data</a>
+        </div>
+        <div class="form-group">
             {{ Form::label('title', Lang::get('pages.title'), array('class' => 'control-label')) }}
             {{ Form::text('title', null, array('placeholder' => 'Pagina titel', 'class' => 'form-control')) }}
             {{ $errors->first('title') }}
@@ -22,7 +25,9 @@
             {{ $errors->first('content') }}
         </div>
     </div>
-    <div class="panel-right show">
+    <div class="panel-right">
+        <h2><span class="close">X</span> Meta data</h2>
+        <hr />
         <div class="form-group">
             {{ Form::label('type', Lang::get('pages.type'), array('class' => 'control-label')) }}
             {{ Form::select('type', array('1' => 'Pagina', '2' => 'Contact', '3' => 'Catalogus')) }}
@@ -32,7 +37,6 @@
             {{ Form::label('active', Lang::get('pages.active'), array('class' => 'control-label')) }}
             {{ Form::checkbox('active') }}
         </div>
-        <h2>Meta data</h2>
         <div class="form-group">
             {{ Form::label('keywords', Lang::get('pages.keywords'), array('class' => 'control-label')) }}
             {{ Form::text('keywords', null, array('placeholder' => 'Trefwoorden...', 'class' => 'form-control')) }}
@@ -54,5 +58,15 @@
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
         CKEDITOR.replace('ckeditor');
+
+        $('.open').click(function(event) {
+            var $rightPanel = $(this);
+            $rightPanel.addClass('show');
+        });
+
+        $('.close').click(function(event) {
+            var $rightPanel = $(this);
+            $rightPanel.removeClass('show');
+        });
     </script>
 @stop

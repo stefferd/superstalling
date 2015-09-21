@@ -70,12 +70,13 @@ h1 {
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -300px;
+    right: -340px;
     width: 300px;
     height: 100%;
     background-color: #FFF;
     border-left: 1px solid #CDCDCD;
     overflow: auto;
+    padding: 20px;
     /*
     must have a higher z-index than panel-main,
     needed when panel-right hovers panel-main
@@ -87,4 +88,5 @@ h1 {
 .panel-right .show {
     transform: translateX(-300px);
     box-shadow: 0 0 6px rgba(0,0,0,0.25);
+    right: 0;
 }
