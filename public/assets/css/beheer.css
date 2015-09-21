@@ -31,6 +31,9 @@ h1 {
     bottom: 0;
     position: absolute;
 }
+.navigation .navigation-top .active {
+    border-right: 2px solid #D9125D;
+}
 
 .navigation ul li {
     width: 100%;
@@ -39,6 +42,7 @@ h1 {
     text-indent: 25px;
     font-size: 16px;
     line-height: 40px;
+    border-right: 2px solid transparent;
 }
 
 /* Panels */
