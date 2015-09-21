@@ -9,7 +9,7 @@
             @include('admin.includes.navigation')
         </div>
         <main class="main-panel">
-            <div class="container">
+            <div class="container-fluid">
                 <h1>@yield('title')</h1>
                 @yield('content')
                 @include('admin.includes.footer')
