@@ -30,7 +30,7 @@
         <hr />
         <div class="form-group">
             {{ Form::label('type', Lang::get('pages.type'), array('class' => 'control-label')) }}
-            {{ Form::select('type', array('1' => 'Pagina', '2' => 'Contact', '3' => 'Catalogus'), array('class' => 'form-control')) }}
+            {{ Form::select('type', array('1' => 'Pagina', '2' => 'Contact', '3' => 'Catalogus'), null, array('class' => 'form-control')) }}
             {{ $errors->first('content') }}
         </div>
         <div class="form-group">
