@@ -13,3 +13,18 @@ h1 {
     background: #FFF;
     padding: 20px;
 }
+
+.navigation {
+    width: 100%;
+}
+
+.navigation ul {
+    list-style: none inside none;
+}
+
+.navigation ul li {
+    width: 100%;
+    border-bottom: 1px solid #CDCDCD;
+    background: #FFF;
+    text-indent: 25px;
+}
