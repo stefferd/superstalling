@@ -60,12 +60,12 @@
         CKEDITOR.replace('ckeditor');
 
         $('.open').click(function(event) {
-            var $rightPanel = $(this);
+            var $rightPanel = $('.panel-right');
             $rightPanel.addClass('show');
         });
 
         $('.close').click(function(event) {
-            var $rightPanel = $(this);
+            var $rightPanel = $('.panel-right');
             $rightPanel.removeClass('show');
         });
     </script>
