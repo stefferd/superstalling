@@ -6087,7 +6087,7 @@ img {
 @media screen and (min-width: 768px) {
   /* line 97, ../sass/_main.scss */
   .carousel {
-    border-top: 20px solid #1c2437;
+    border-top: 20px solid #FFF;
     margin-top: 190px;
   }
 }
