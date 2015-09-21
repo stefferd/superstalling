@@ -51,7 +51,7 @@ class FrontController extends BaseController {
             'message' => 'required|min:10'
         );
 
-        $pageName = 'contact us';
+        $pageName = 'contact';
         $page = Page::where('title', 'LIKE', $pageName)->first();
 
         $validator = Validator::make(Input::all(), $rules);
