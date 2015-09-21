@@ -4927,8 +4927,8 @@ input[type="button"].btn-block {
 
 /* line 490, ../sass/_navbar.scss */
 .navbar-inverse {
-  background-color: #FFF;
-  border-color: #090909;
+  background-color: #868B94;
+  border-color: #FFF;
 }
 /* line 494, ../sass/_navbar.scss */
 .navbar-inverse .navbar-brand {
