@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-6 col-md-offset-3">
-                <img src="{{ URL::asset('assets/img/DEB-Media-logo-wit.png') }}" />
+                <img src="{{ URL::asset('assets/img/DEB-Media-logo-wit.png') }}" style="margin: 0 auto; text-align: center;" />
             </div>
         </div>
         <div class="row">

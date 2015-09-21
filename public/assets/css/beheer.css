@@ -1,8 +1,15 @@
 body {
     border-top: 10px solid #D9125D;
+    background: #DDD;
 }
 
-.dark {
-    background: #DDD;
-    color: #2B2B2B;
+h1 {
+    color: #D9125D;
+    text-align: center;
+}
+
+.login-box {
+    border: 1px solid #CDCDCD;
+    background: #FFF;
+    padding: 20px;
 }
