@@ -1,1 +1,1 @@
-<footer class="copyright text-right">Copyright &copy Stef van den Berg</footer>
+<footer class="copyright text-right">Copyright &copy Debmedia</footer>
