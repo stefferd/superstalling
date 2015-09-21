@@ -5,12 +5,15 @@
 </head>
 <body class="@yield('title')">
     <div class="container-fluid">
-        @include('admin.includes.navigation')
-        <main class="container">
+        <div class="left-panel">
+            @include('admin.includes.navigation')
+        </div>
+        <main class="main-panel container">
             <h1>@yield('title')</h1>
             @yield('content')
+            @include('admin.includes.footer')
         </main>
-        @include('admin.includes.footer')
+        <div class="right-panel"></div>
     </div>
 </body>
 </html>
