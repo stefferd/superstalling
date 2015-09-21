@@ -4927,7 +4927,7 @@ input[type="button"].btn-block {
 
 /* line 490, ../sass/_navbar.scss */
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #FFF;
   border-color: #090909;
 }
 /* line 494, ../sass/_navbar.scss */
@@ -5993,15 +5993,27 @@ img {
 @media screen and (min-width: 768px) {
   /* line 27, ../sass/_main.scss */
   .navbar-inverse {
-    background: -webkit-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
-    background: -moz-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
-    background: -ms-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
-    background: linear-gradient(#2e3a58, #1c2437 140px, #ffffff 140px, #ffffff 100%);
     position: absolute;
     top: 0;
     width: 100%;
     border: 0;
     border-radius: 0;
+  }
+  .navbar-inverse .navbar-collapse,
+  .navbar-inverse .navbar-collapse:before,
+  .navbar-inverse .navbar-collapse:after {
+    background: -webkit-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
+    background: -moz-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
+    background: -ms-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
+    background: linear-gradient(#2e3a58, #1c2437 140px, #ffffff 140px, #ffffff 100%);
+  }
+
+  .navbar-inverse .navbar-nav > .active > a {
+    color: #2e3a58;
+    background: #FFF;
+  }
+  .navbar-inverse .navbar-nav > li > a {
+    color: #FFF;
   }
   /* line 42, ../sass/_main.scss */
   .navbar-inverse.sticky {
