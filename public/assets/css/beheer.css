@@ -1,6 +1,8 @@
 body {
     border-top: 10px solid #D9125D;
     background: #DDD;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -20,6 +22,8 @@ h1 {
 
 .navigation ul {
     list-style: none inside none;
+    margin: 0;
+    width: 100%;
 }
 
 .navigation ul li {
@@ -27,6 +31,8 @@ h1 {
     border-bottom: 1px solid #CDCDCD;
     background: #FFF;
     text-indent: 25px;
+    font-size: 16px;
+    line-height: 32px;
 }
 
 /* Panels */
