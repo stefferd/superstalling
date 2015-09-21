@@ -1,4 +1,4 @@
-body {
+html, body {
     border-top: 10px solid #D9125D;
     background: #DDD;
     width: 100%;
@@ -23,6 +23,7 @@ h1 {
 .navigation ul {
     list-style: none inside none;
     margin: 0;
+    padding: 0;
     width: 100%;
 }
 
@@ -32,7 +33,7 @@ h1 {
     background: #FFF;
     text-indent: 25px;
     font-size: 16px;
-    line-height: 32px;
+    line-height: 40px;
 }
 
 /* Panels */
@@ -40,7 +41,7 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 330px;
+    width: 250px;
     height: 100%;
     background-color: #FFF;
     border-right: 1px solid #CDCDCD;
@@ -53,7 +54,7 @@ h1 {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 330px;
+    left: 250px;
     min-width: 750px;
     height: 100%;
     background-color: #DDDDDD;
