@@ -6718,6 +6718,7 @@ body.modal-open,
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-height: 400px;
 }
 /* line 16, ../sass/_carousel.scss */
 .carousel-inner > .item {
