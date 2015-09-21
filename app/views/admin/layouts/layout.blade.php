@@ -3,7 +3,7 @@
 <head>
     @include('admin.includes.head')
 </head>
-<body>
+<body class="dark">
     <div class="container-fluid">
         @include('admin.includes.navigation')
         <main class="container">
