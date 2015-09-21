@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'postmaster@mg.classiccarseurope.eu', 'name' => 'Classiccarseurope.eu'),
+	'from' => array('address' => 'info@superstalling.nl', 'name' => 'Superstalling'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'postmaster@mg.classiccarseurope.eu',
+	'username' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'emiel',
+	'password' => '',
 
 	/*
 	|--------------------------------------------------------------------------
