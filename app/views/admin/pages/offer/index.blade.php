@@ -1,11 +1,11 @@
 @extends('admin.layouts.layout')
 
 @section('meta')
-    {{ Lang::get('settings.headtitle') }}
+    {{ Lang::get('offer.headtitle') }}
 @stop
 
 @section('title')
-    {{ Lang::get('settings.index') }}
+    {{ Lang::get('offer.index') }}
 @stop
 
 @section('content')
@@ -17,9 +17,9 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>{{ Lang::get('settings.key') }}</th>
-                <th>{{ Lang::get('settings.value') }}</th>
-                <th>{{ Lang::get('settings.created_at') }}</th>
+                <th>{{ Lang::get('offer.key') }}</th>
+                <th>{{ Lang::get('offer.value') }}</th>
+                <th>{{ Lang::get('offer.created_at') }}</th>
                 <th>{{ Lang::get('admin.actions') }}</th>
             </tr>
         </thead>
@@ -30,7 +30,7 @@
                     <td>{{$setting->value}}</td>
                     <td>{{$setting->created_at}}</td>
                     <td>
-                        <a class="btn btn-xs btn-default" href="{{ URL::route('admin.settings.edit', array('id' => $setting->id)) }}">{{ Lang::get('admin.action_edit') }}</a>
+                        <a class="btn btn-xs btn-default" href="{{ URL::route('admin.offer.edit', array('id' => $setting->id)) }}">{{ Lang::get('admin.action_edit') }}</a>
                     </td>
                 </tr>
             @endforeach
