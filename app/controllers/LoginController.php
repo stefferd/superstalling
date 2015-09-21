@@ -9,7 +9,8 @@
 class LoginController extends BaseController {
 
     public function login() {
-        return View::make('admin.pages.login');
+        $title = 'login';
+        return View::make('admin.pages.login')->With(['title' => $title]);
     }
 
     public function authenticate() {
