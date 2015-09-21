@@ -14,6 +14,5 @@
             @include('admin.includes.footer')
         </div>
     </main>
-    <div class="panel-right"></div>
 </body>
 </html>
