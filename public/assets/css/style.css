@@ -6078,7 +6078,6 @@ img {
   /* line 89, ../sass/_main.scss */
   .navbar-nav > li > a:hover {
     background-position: 0 100%;
-    color: #1d2a4a !important;
   }
 }
 
