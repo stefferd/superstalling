@@ -28,3 +28,51 @@ h1 {
     background: #FFF;
     text-indent: 25px;
 }
+
+/* Panels */
+.panel-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 330px;
+    height: 100%;
+    background-color: #FFF;
+    border-right: 1px solid #CDCDCD;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.panel-main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 330px;
+    min-width: 750px;
+    height: 100%;
+    background-color: #DDDDDD;
+    overflow: auto;
+}
+
+.panel-right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #FFF;
+    border-left: 1px solid #CDCDCD;
+    overflow: auto;
+    /*
+    must have a higher z-index than panel-main,
+    needed when panel-right hovers panel-main
+    */
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+}
+
+.panel-right .show {
+    transform: translateX(-300px);
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
