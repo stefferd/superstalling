@@ -6,8 +6,7 @@ html, body {
 }
 
 h1 {
-    color: #D9125D;
-    text-align: center;
+    color: #CDCDCD;
 }
 
 .login-box {
@@ -18,6 +17,8 @@ h1 {
 
 .navigation {
     width: 100%;
+    position: relative;
+    height: 100%;
 }
 
 .navigation ul {
@@ -25,6 +26,10 @@ h1 {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+.navigation .navigation-bottom {
+    bottom: 0;
+    position: absolute;
 }
 
 .navigation ul li {
@@ -57,7 +62,7 @@ h1 {
     left: 250px;
     min-width: 750px;
     height: 100%;
-    background-color: #DDDDDD;
+    background-color: #EFEFEF;
     overflow: auto;
 }
 
