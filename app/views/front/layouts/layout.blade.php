@@ -47,13 +47,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="{{ URL::asset('assets/img/1@2x.jpg') }}" height="540">
+                    <img src="{{ URL::asset('assets/img/1@2x.jpg') }}" height="340">
                 </div>
                 <div class="item">
-                    <img src="{{ URL::asset('assets/img/2@2x.jpg') }}" height="540">
+                    <img src="{{ URL::asset('assets/img/2@2x.jpg') }}" height="340">
                 </div>
                 <div class="item">
-                    <img src="{{ URL::asset('assets/img/3@2x.jpg') }}" height="540">
+                    <img src="{{ URL::asset('assets/img/3@2x.jpg') }}" height="340">
                 </div>
             </div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
