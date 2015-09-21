@@ -1,6 +1,6 @@
 @if (Auth::check())
-    <nav class="navbar navbar-default navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav navbar-left">
+    <div class="navigation">
+        <ul class="nav navbar-nav navbar-left" role="navigation">
             <li><a href="{{ URL::route('admin.dashboard.index') }}">{{ Lang::get('admin.dashboard') }}</a></li>
             <li><a href="{{ URL::route('admin.users.index') }}">{{ Lang::get('users.menu') }}</a></li>
             <li><a href="{{ URL::route('admin.pages.index') }}">{{ Lang::get('pages.menu') }}</a></li>
@@ -10,9 +10,9 @@
             {{--<li><a href="{{ URL::route('admin.subscriber.index') }}">{{ Lang::get('subscriber.menu') }}</a></li>--}}
             <li><a href="{{ URL::route('admin.settings.index') }}">{{ Lang::get('settings.menu') }}</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right" role="navigation">
             <li><a>{{ Auth::user()->name }}</a></li>
             <li><a href="{{ URL::route('admin.logout') }}">{{ Lang::get('admin.action_logout') }}</a></li>
         </ul>
-    </nav>
+    </div>
 @endif
