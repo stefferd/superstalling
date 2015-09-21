@@ -61,7 +61,7 @@ class FrontController extends BaseController {
             $settingsEmail = Settings::where('key', '=', 'contact_email')->first();
             $settingsEmailName = Settings::where('key', '=', 'contact_name')->first();
             $data = array(
-                'subject' => 'Contact form Classiccarseurope.eu',
+                'subject' => 'Contact form superstalling.nl',
                 'to' => $settingsEmail->value,
                 'to_name' => $settingsEmailName->value,
                 'from_message' => Input::get('message'),
