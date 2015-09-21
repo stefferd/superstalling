@@ -4,6 +4,7 @@
     @include('front.includes.head')
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/sass-bootstrap.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/style.css') }}" />
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body class="{{$page->title}}">
     <div class="navbar navbar-inverse">
