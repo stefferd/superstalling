@@ -79,11 +79,15 @@ class FrontController extends BaseController {
     }
 
     public function offer() {
-        return View::make('front.pages.offer');
+        $pageName = 'offerte-aanvragen';
+        $page = Page::where('title', 'LIKE', $pageName)->first();
+        return View::make('front.pages.offer')->with(['page' => $page]);
     }
 
     public function sendOffer() {
-        return View::make('front.pages.offer')->with(['message' => 'Mail send successfully']);
+        $pageName = 'offerte-aanvragen';
+        $page = Page::where('title', 'LIKE', $pageName)->first();
+        return View::make('front.pages.offer')->with(['page' => $page, 'message' => 'Mail send successfully']);
     }
 
     public function inventory() {
