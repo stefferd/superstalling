@@ -111,6 +111,8 @@ Route::get('/inventory/{filter}/{value}', ['as' => 'front.inventory.prefilter', 
 Route::get('/newsletter/unsubscribe/{user}', ['as' => 'front.newsletter.unsubscribe', 'uses' => 'FrontController@unsubscribe']);
 Route::post('/subscribe', ['as' => 'front.newsletter', 'uses' => 'FrontController@subscribe']);
 Route::post('/contact', ['as' => 'front.contact', 'uses' => 'FrontController@contact']);
+Route::get('/offerte-aanvragen', ['as' => 'front.offer', 'uses' => 'FrontController@offer']);
+Route::post('/offerte-aanvragen', ['as' => 'front.sendOffer', 'uses' => 'FrontController@sendOffer']);
 Route::get('/{pageName}', ['as' => 'front.page', 'uses' => 'FrontController@page', 'except' => 'admin, install, inventory, newsubscription, newsletter']);
 
 // ===============================================

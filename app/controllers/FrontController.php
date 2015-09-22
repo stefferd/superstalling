@@ -78,6 +78,14 @@ class FrontController extends BaseController {
         }
     }
 
+    public function offer() {
+        return View::make('front.pages.offer');
+    }
+
+    public function sendOffer() {
+        return View::make('front.pages.offer')->with(['message' => 'Mail send successfully']);
+    }
+
     public function inventory() {
         Session::flush();
         $entries = Catalog::with('car')->join('cars', 'catalog.id', '=', 'cars.id')->orderBy('catalog.created_at', 'desc')->where('cars.status', '<>', 'Sold')->get();

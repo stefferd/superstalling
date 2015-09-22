@@ -17,20 +17,24 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>{{ Lang::get('offer.key') }}</th>
-                <th>{{ Lang::get('offer.value') }}</th>
-                <th>{{ Lang::get('offer.created_at') }}</th>
+                <th>{{ Lang::get('offer.name') }}</th>
+                <th>{{ Lang::get('offer.storage') }}</th>
+                <th>{{ Lang::get('offer.boat') }}</th>
+                <th>{{ Lang::get('offer.storage_period') }}</th>
+                <th>{{ Lang::get('offer.storage_start') }}</th>
                 <th>{{ Lang::get('admin.actions') }}</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($settings as $setting)
+            @foreach($offers as $offer)
                 <tr>
-                    <td>{{$setting->key}}</td>
-                    <td>{{$setting->value}}</td>
-                    <td>{{$setting->created_at}}</td>
+                    <td>{{$offer->name}}</td>
+                    <td>{{$offer->storage}}</td>
+                    <td>{{$offer->boat}}</td>
+                    <td>{{$offer->storage_period}}</td>
+                    <td>{{$offer->storage_start}}</td>
                     <td>
-                        <a class="btn btn-xs btn-default" href="{{ URL::route('admin.offer.edit', array('id' => $setting->id)) }}">{{ Lang::get('admin.action_edit') }}</a>
+                        <a class="btn btn-xs btn-default" href="{{ URL::route('admin.offer.edit', array('id' => $offer->id)) }}">{{ Lang::get('admin.action_edit') }}</a>
                     </td>
                 </tr>
             @endforeach

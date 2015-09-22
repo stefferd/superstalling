@@ -3,13 +3,13 @@
 class OfferController extends BaseController {
 
     public function index() {
-        $settings = Settings::all();
-        return View::make('admin.pages.offer.index')->with(['settings' => $settings]);
+        $offers = Offers::all();
+        return View::make('admin.pages.offer.index')->with(['offers' => $offers]);
     }
 
     public function edit($id) {
-        $setting = Settings::find($id);
-        return View::make('admin.pages.offer.edit')->with(['setting' => $setting]);
+        $offers = Offers::find($id);
+        return View::make('admin.pages.offer.edit')->with(['offers' => $offers]);
     }
 
     public function update($id) {

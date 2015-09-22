@@ -15,5 +15,10 @@ return array(
     'updated_at' => 'Aangepast op',
     'headtitle' => 'Offerte instellingen beheren',
     'index' => 'Offerte instellingen',
-    'edit' => 'Offerte instelling bewerken'
+    'edit' => 'Offerte instelling bewerken',
+    'name' => 'Naam',
+    'storage' => 'Stallingstype',
+    'boat' => 'Bootnaam',
+    'storage_period' => 'Stallingsperiode',
+    'storage_start' => 'Startdatum'
 );
