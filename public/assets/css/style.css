@@ -3756,11 +3756,10 @@ input[type="button"].btn-block {
   padding: 10px 5px;
   text-align: left;
   clear: both;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 15px;
+  line-height: 24px;
   font-weight: normal;
   color: #FFF;
-  background: #27324C;
   white-space: nowrap;
 }
 
@@ -4788,6 +4787,7 @@ input[type="button"].btn-block {
   margin-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+  background: #27324C;
 }
 
 /* line 315, ../sass/_navbar.scss */
