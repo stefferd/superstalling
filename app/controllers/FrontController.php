@@ -103,7 +103,7 @@ class FrontController extends BaseController {
 
         $validator = Validator::make(Input::all(), $rules);
         if ($validator->fails()) {
-            return Redirect::route('front.pages.offer')->withErrors($validator)->With(Input::all())->with(['page' => $page]);
+            return Redirect::route('front.offer')->withErrors($validator)->With(Input::all());
         } else {
             $offer = new Offers;
             $offer->name = Input::get('name');
