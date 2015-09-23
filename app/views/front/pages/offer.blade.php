@@ -177,14 +177,24 @@
                 $('#btw').html('0,00');
                 $('#total').html('<strong>0,00</strong>');
 
-                $('.length').on('change', calculatePrice);
+                $('.length').on('change', function() {
+                    calculatePrice();
+                });
+                $('.width').on('change', function() {
+                    calculatePrice();
+                });
+                $('#storage').on('change', function() {
+                    calculatePrice();
+                });
 
                 var calculatePrice = function () {
+                    console.log('calculatePrice');
                     var $length = $('.length');
                     var $width = $('.width');
                     var $storage = $('#storage');
 
                     if ($length.val() !== '' && $width.val() !== '' && $storage.val() !== '') {
+                        console.log($length.val(), $width.val(), $storage.val());
                         var size = parseFloat($length.val()) * parseFloat($width.val());
                         var price = 49.50;
                         if ($storage.val() === 'Binnenstalling') {
@@ -193,6 +203,7 @@
                             price = 17.50;
                         }
                         var subtotal = Math.round((price * size) * 100) / 100;
+                        console.log(subtotal);
                         $('#total').html('<strong>' + subtotal + '</strong>');
                     }
                 };
