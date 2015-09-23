@@ -87,7 +87,49 @@ class FrontController extends BaseController {
     public function sendOffer() {
         $pageName = 'Offerte aanvragen';
         $page = Page::where('title', 'LIKE', $pageName)->first();
-        return View::make('front.pages.offer')->with(['page' => $page, 'message' => 'Mail send successfully']);
+
+        $rules = array(
+            'name' => 'required|min:3',
+            'address' => 'required|min:3',
+            'zipcode' => 'required|min:3',
+            'city' => 'required|min:3',
+            'email' => 'required|min:3',
+            'boat_length' => 'required|min:1',
+            'boat_width' => 'required|min:1',
+            'storage' => 'required|min:3',
+            'total' => 'required|min:1'
+        );
+
+        $validator = Validator::make(Input::all(), $rules);
+        if ($validator->fails()) {
+            return Redirect::route('front.pages.offer')->withErrors($validator)->With(Input::all())->with(['page' => $page]);
+        } else {
+            $offer = new Offers;
+            $offer->name = Input::get('name');
+            $offer->street = Input::get('street');
+            $offer->zipcode = Input::get('zipcode');
+            $offer->city = Input::get('city');
+            $offer->phone = Input::get('phone');
+            $offer->email = Input::get('email');
+            $offer->boat = Input::get('boat');
+            $offer->storage = Input::get('storage');
+            $offer->boat_length = Input::get('boat_length');
+            $offer->boat_width = Input::get('boat_width');
+            $offer->home_service = Input::get('home_service');
+            $offer->home_service_km = Input::get('home_service_km');
+            $offer->battery_service = Input::get('battery_service');
+            $offer->outside_motor = Input::get('outside_motor');
+            $offer->winter_ready = Input::get('winter_ready');
+            $offer->repair_silo = Input::get('repair_silo');
+            $offer->storage_period = Input::get('storage_period');
+            $offer->storage_start = Input::get('storage_start');
+            $offer->remarks = Input::get('remarks');
+            $offer->total = Input::get('total');
+
+            if ($offer->save()) {
+                return View::make('front.pages.offer')->with(['page' => $page, 'message' => 'Offerte is aangevraagt, bedankt voor uw interesse wij nemen zo snel mogelijk contact met u op.']);
+            }
+        }
     }
 
     public function inventory() {
