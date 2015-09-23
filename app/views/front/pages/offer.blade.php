@@ -27,11 +27,11 @@
                     {{ $errors->first('address') }}
                 </div>
                 <div class="form-group">
-                    {{ Form::text('postcode', null, array('placeholder' => 'Postcode', 'class' => 'form-control')) }}
+                    {{ Form::text('postcode', null, array('placeholder' => 'Postcode', 'class' => 'form-control col-xs-3')) }}
                     {{ $errors->first('postcode') }}
                 </div>
                 <div class="form-group">
-                    {{ Form::text('city', null, array('placeholder' => 'Plaats', 'class' => 'form-control')) }}
+                    {{ Form::text('city', null, array('placeholder' => 'Plaats', 'class' => 'form-control col-xs-3 col-xs-offset-6')) }}
                     {{ $errors->first('city') }}
                 </div>
                 <div class="form-group">
