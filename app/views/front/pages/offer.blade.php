@@ -16,46 +16,51 @@
     {{ $page->content }}
     @if (!isset($message))
         {{ Form::open(array('route' => array('front.sendOffer'))) }}
-        <div class="form-group">
-            {{ Form::text('name', null, array('placeholder' => 'Naam', 'class' => 'form-control')) }}
-            {{ $errors->first('name') }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('address', null, array('placeholder' => 'Adres', 'class' => 'form-control')) }}
-            {{ $errors->first('address') }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('postcode', null, array('placeholder' => 'Postcode', 'class' => 'form-control')) }}
-            {{ $errors->first('postcode') }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('city', null, array('placeholder' => 'Plaats', 'class' => 'form-control')) }}
-            {{ $errors->first('city') }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('phone', null, array('placeholder' => 'Telefoon', 'class' => 'form-control')) }}
-            {{ $errors->first('phone') }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('email', null, array('placeholder' => 'Email', 'class' => 'form-control')) }}
-            {{ $errors->first('email') }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('boat', null, array('placeholder' => 'Naam van de boot', 'class' => 'form-control')) }}
-            {{ $errors->first('boat') }}
-        </div>
-        <hr />
-        <div class="form-group">
-            {{ Form::text('storage', null, array('placeholder' => 'Stallingstype', 'class' => 'form-control')) }}
-            {{ $errors->first('boat') }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('boat_length', null, array('placeholder' => 'Lengte', 'class' => 'form-control')) }}
-            {{ $errors->first('boat_length') }}
-        </div>
-        <div class="form-group">
-            {{ Form::text('boat_width', null, array('placeholder' => 'Breedte', 'class' => 'form-control')) }}
-            {{ $errors->first('boat_width') }}
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                    {{ Form::text('name', null, array('placeholder' => 'Naam', 'class' => 'form-control')) }}
+                    {{ $errors->first('name') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::text('address', null, array('placeholder' => 'Adres', 'class' => 'form-control')) }}
+                    {{ $errors->first('address') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::text('postcode', null, array('placeholder' => 'Postcode', 'class' => 'form-control')) }}
+                    {{ $errors->first('postcode') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::text('city', null, array('placeholder' => 'Plaats', 'class' => 'form-control')) }}
+                    {{ $errors->first('city') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::text('phone', null, array('placeholder' => 'Telefoon', 'class' => 'form-control')) }}
+                    {{ $errors->first('phone') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::text('email', null, array('placeholder' => 'Email', 'class' => 'form-control')) }}
+                    {{ $errors->first('email') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::text('boat', null, array('placeholder' => 'Naam van de boot', 'class' => 'form-control')) }}
+                    {{ $errors->first('boat') }}
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                    {{ Form::text('storage', null, array('placeholder' => 'Stallingstype', 'class' => 'form-control')) }}
+                    {{ $errors->first('boat') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::text('boat_length', null, array('placeholder' => 'Lengte', 'class' => 'form-control')) }}
+                    {{ $errors->first('boat_length') }}
+                </div>
+                <div class="form-group">
+                    {{ Form::text('boat_width', null, array('placeholder' => 'Breedte', 'class' => 'form-control')) }}
+                    {{ $errors->first('boat_width') }}
+                </div>
+            </div>
         </div>
         <hr />
         <div class="form-group">
