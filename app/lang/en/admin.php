@@ -15,6 +15,7 @@ return array(
     'action_delete' => 'Verwijderen',
     'action_logout' => 'Uitloggen',
     'action_send' => 'Versturen',
+    'action_view' => 'Bekijken',
     'dashboard' => 'Dashboard',
     'action_newsletter' => 'Versturen als nieuwsbrief'
 );

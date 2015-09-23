@@ -7,6 +7,11 @@ class OfferController extends BaseController {
         return View::make('admin.pages.offer.index')->with(['offers' => $offers]);
     }
 
+    public function view($id) {
+        $offer = Offers::find($id)->first();
+        return View::make('admin.pages.offer.view')->with(['offer' => $offer]);
+    }
+
     public function edit($id) {
         $offers = Offers::find($id);
         return View::make('admin.pages.offer.edit')->with(['offers' => $offers]);

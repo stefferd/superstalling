@@ -24,9 +24,9 @@
                     {{ $errors->first('name') }}
                 </div>
                 <div class="form-group">
-                    {{ Form::label('address', 'Adres', array('class' => 'form-label')) }}
-                    {{ Form::text('address', Input::old('address'), array('placeholder' => 'Adres', 'class' => 'form-control')) }}
-                    {{ $errors->first('address') }}
+                    {{ Form::label('street', 'Adres', array('class' => 'form-label')) }}
+                    {{ Form::text('street', Input::old('street'), array('placeholder' => 'Adres', 'class' => 'form-control')) }}
+                    {{ $errors->first('street') }}
                 </div>
                 <div class="form-group">
                     {{ Form::label('zipcode', 'Postcode + woonplaats', array('class' => 'form-label')) }}

@@ -38,6 +38,11 @@
             {{ $errors->first('content') }}
         </div>
         <div class="form-group">
+            {{ Form::label('slug', Lang::get('pages.slug'), array('class' => 'control-label')) }}
+            {{ Form::text('slug', null, array('placeholder' => 'Url deel', 'class' => 'form-control')) }}
+            {{ $errors->first('slug') }}
+        </div>
+        <div class="form-group">
             {{ Form::label('active', Lang::get('pages.active'), array('class' => 'control-label')) }}
             {{ Form::checkbox('active') }}
         </div>

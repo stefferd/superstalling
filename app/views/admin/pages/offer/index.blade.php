@@ -34,7 +34,7 @@
                     <td>{{$offer->storage_period}}</td>
                     <td>{{$offer->storage_start}}</td>
                     <td>
-                        <a class="btn btn-xs btn-default" href="{{ URL::route('admin.offer.edit', array('id' => $offer->id)) }}">{{ Lang::get('admin.action_edit') }}</a>
+                        <a class="btn btn-xs btn-default" href="{{ URL::route('admin.offer.view', array('id' => $offer->id)) }}">{{ Lang::get('admin.action_view') }}</a>
                     </td>
                 </tr>
             @endforeach

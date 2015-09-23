@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/style.css') }}" />
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 </head>
-<body class="{{$page->title}}">
+<body class="<?php if (isset($page)) { echo $page->title ;  } ?>">
     <div class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
@@ -21,7 +21,7 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li {{($page->title == 'Home') ? ' class="active"' : ''}}><a href="{{ URL::to('/') }}" title="Home">Home</a></li>
+                    <li {{(isset($page->title) && $page->title == 'Home') ? ' class="active"' : ''}}><a href="{{ URL::to('/') }}" title="Home">Home</a></li>
                     <li class="dropdown">
                         <a href="{{ URL::to('/onze-diensten/') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Onze diensten <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -31,14 +31,14 @@
                             <li><a href="{{ URL::to('/overige/') }}">Overige</a></li>
                         </ul>
                     </li>
-                    <li {{($page->title == 'Offerte aanvragen') ? ' class="active"' : ''}}><a href="{{ URL::to('/offerte-aanvragen/') }}">Offerte aanvragen</a></li>
-                    <li {{($page->title == 'Contact') ? ' class="active"' : ''}}><a href="{{ URL::to('/contact/') }}" title="Contact">Contact</a></li>
-                    <li {{($page->title == 'Scheepvaartwinkel Marine BV') ? ' class="active"' : ''}}><a href="{{ URL::to('/scheepvaartwinkel-marine-bv/') }}">Scheepvaartwinkel Marine B.V</a></li>
+                    <li {{(isset($page->title) && $page->title == 'Offerte aanvragen') ? ' class="active"' : ''}}><a href="{{ URL::to('/offerte-aanvragen/') }}">Offerte aanvragen</a></li>
+                    <li {{(isset($page->title) && $page->title == 'Contact') ? ' class="active"' : ''}}><a href="{{ URL::to('/contact/') }}" title="Contact">Contact</a></li>
+                    <li {{(isset($page->title) && $page->title == 'Scheepvaartwinkel Marine BV') ? ' class="active"' : ''}}><a href="{{ URL::to('/scheepvaartwinkel-marine-bv/') }}">Scheepvaartwinkel Marine B.V</a></li>
                 </ul>
             </div><!--/.navbar-collapse -->
         </div>
     </div>
-    @if ($page->title == 'Home')
+    @if (isset($page->title) && $page->title == 'Home')
         <div id="myCarousel" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators">

@@ -33,6 +33,7 @@ class PageController extends BaseController {
             $page->keywords = Input::get('keywords');
             $page->type = Input::get('type');
             $page->description = Input::get('description');
+            $page->slug = Input::get('slug');
             $page->user_id = Auth::user()->id;
 
             if ($page->save()) {
@@ -59,6 +60,7 @@ class PageController extends BaseController {
             $page->keywords = Input::get('keywords');
             $page->type = Input::get('type');
             $page->description = Input::get('description');
+            $page->slug = Input::get('slug');
             $page->user_id = Auth::user()->id;
 
             if ($page->save()) {

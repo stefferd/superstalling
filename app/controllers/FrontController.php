@@ -23,8 +23,7 @@ class FrontController extends BaseController {
 	}
 
     public function page($pageName) {
-        $pageName = str_replace('-', ' ', $pageName);
-        $page = Page::where('title', 'LIKE', $pageName)->first();
+        $page = Page::where('slug', 'LIKE', $pageName)->first();
         return View::make('front.pages.page')->with(['page' => $page]);
     }
 
@@ -51,8 +50,8 @@ class FrontController extends BaseController {
             'message' => 'required|min:10'
         );
 
-        $pageName = 'Contact';
-        $page = Page::where('title', 'LIKE', $pageName)->first();
+        $slug = 'contact';
+        $page = Page::where('slug', 'LIKE', $slug)->first();
 
         $validator = Validator::make(Input::all(), $rules);
         if ($validator->fails()) {
@@ -79,18 +78,18 @@ class FrontController extends BaseController {
     }
 
     public function offer() {
-        $pageName = 'Offerte aanvragen';
-        $page = Page::where('title', 'LIKE', $pageName)->first();
+        $slug = 'offerte-aanvragen';
+        $page = Page::where('slug', 'LIKE', $slug)->first();
         return View::make('front.pages.offer')->with(['page' => $page]);
     }
 
     public function sendOffer() {
-        $pageName = 'Offerte aanvragen';
-        $page = Page::where('title', 'LIKE', $pageName)->first();
+        $slug = 'offerte-aanvragen';
+        $page = Page::where('slug', 'LIKE', $slug)->first();
 
         $rules = array(
             'name' => 'required|min:3',
-            'address' => 'required|min:3',
+            'street' => 'required|min:3',
             'zipcode' => 'required|min:3',
             'city' => 'required|min:3',
             'email' => 'required|min:3',
@@ -127,6 +126,7 @@ class FrontController extends BaseController {
             $offer->remarks = Input::get('remarks');
             $offer->total = Input::get('total');
 
+//            dd($offer);
             if ($offer->save()) {
                 return View::make('front.pages.offer')->with(['page' => $page, 'message' => 'Offerte is aangevraagt, bedankt voor uw interesse wij nemen zo snel mogelijk contact met u op.']);
             }
