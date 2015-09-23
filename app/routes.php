@@ -83,7 +83,7 @@ Route::group(['prefix' => 'admin', 'before' => 'auth'], function() {
     });
 
     /* Admin : offer */
-    Route::group(['prefix' => 'offer'], function() {
+    Route::group(['prefix' => 'offers'], function() {
         Route::get('/', ['as' => 'admin.offer.index', 'uses' => 'OfferController@index']);
         Route::get('/{id}/edit/', ['as' => 'admin.offer.edit', 'uses' => 'OfferController@edit']);
         Route::post('/{id}/edit/', ['as' => 'admin.offer.update', 'uses' => 'OfferController@update']);
