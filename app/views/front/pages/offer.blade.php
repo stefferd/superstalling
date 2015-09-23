@@ -190,9 +190,9 @@
                 $('input[name=home_service]').on('click', function() {;
                    var $this = $(this);
                     if ($this.val() === '1') {
-                        $('.home_service_km').removeClass('hidden');
+                        $('.home_service').removeClass('hidden');
                     } else {
-                        $('.home_service_km').addClass('hidden');
+                        $('.home_service').addClass('hidden');
                     }
                 });
 
