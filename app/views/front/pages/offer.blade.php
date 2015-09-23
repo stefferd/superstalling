@@ -19,30 +19,38 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
+                    {{ Form::label('Naam', array('class' => 'form-label')) }}
                     {{ Form::text('name', null, array('placeholder' => 'Naam', 'class' => 'form-control')) }}
                     {{ $errors->first('name') }}
                 </div>
                 <div class="form-group">
+                    {{ Form::label('Adres', array('class' => 'form-label')) }}
                     {{ Form::text('address', null, array('placeholder' => 'Adres', 'class' => 'form-control')) }}
                     {{ $errors->first('address') }}
                 </div>
                 <div class="form-group">
-                    {{ Form::text('postcode', null, array('placeholder' => 'Postcode', 'class' => 'form-control col-xs-3')) }}
-                    {{ $errors->first('postcode') }}
+                    {{ Form::label('Postcode + woonplaats', array('class' => 'form-label')) }}
+                    <div class="col-xs-3">
+                        {{ Form::text('postcode', null, array('placeholder' => 'Postcode', 'class' => 'form-control')) }}
+                        {{ $errors->first('postcode') }}
+                    </div>
+                    <div class="col-xs-3 col-xs-offset-6">
+                        {{ Form::text('city', null, array('placeholder' => 'Plaats', 'class' => 'form-control')) }}
+                        {{ $errors->first('city') }}
+                    </div>
                 </div>
                 <div class="form-group">
-                    {{ Form::text('city', null, array('placeholder' => 'Plaats', 'class' => 'form-control col-xs-3 col-xs-offset-6')) }}
-                    {{ $errors->first('city') }}
-                </div>
-                <div class="form-group">
+                    {{ Form::label('Telefoon', array('class' => 'form-label')) }}
                     {{ Form::text('phone', null, array('placeholder' => 'Telefoon', 'class' => 'form-control')) }}
                     {{ $errors->first('phone') }}
                 </div>
                 <div class="form-group">
+                    {{ Form::label('Email', array('class' => 'form-label')) }}
                     {{ Form::text('email', null, array('placeholder' => 'Email', 'class' => 'form-control')) }}
                     {{ $errors->first('email') }}
                 </div>
                 <div class="form-group">
+                    {{ Form::label('Naam van de boot', array('class' => 'form-label')) }}
                     {{ Form::text('boat', null, array('placeholder' => 'Naam van de boot', 'class' => 'form-control')) }}
                     {{ $errors->first('boat') }}
                 </div>
