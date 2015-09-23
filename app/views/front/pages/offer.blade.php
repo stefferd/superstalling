@@ -51,24 +51,91 @@
                     {{ Form::text('email', null, array('placeholder' => 'Email', 'class' => 'form-control')) }}
                     {{ $errors->first('email') }}
                 </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     {{ Form::label('boat', 'Naam van de boot', array('class' => 'form-label')) }}
                     {{ Form::text('boat', null, array('placeholder' => 'Naam van de boot', 'class' => 'form-control')) }}
                     {{ $errors->first('boat') }}
                 </div>
-            </div>
-            <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                    {{ Form::text('storage', null, array('placeholder' => 'Stallingstype', 'class' => 'form-control')) }}
-                    {{ $errors->first('boat') }}
+                    {{ Form::label('boat_length', 'Afmetingen van de boot', array('class' => 'form-label')) }}
+                    <div class="row">
+                        <div class="col-xs-3">
+                            {{ Form::text('boat_length', null, array('placeholder' => 'Lengte', 'class' => 'form-control')) }}
+                            {{ $errors->first('boat_length') }}
+                        </div>
+                        <div class="col-xs-3 col-xs-offset-6">
+                            {{ Form::text('boat_width', null, array('placeholder' => 'Breedte', 'class' => 'form-control')) }}
+                            {{ $errors->first('boat_width') }}
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
-                    {{ Form::text('boat_length', null, array('placeholder' => 'Lengte', 'class' => 'form-control')) }}
-                    {{ $errors->first('boat_length') }}
+                    {{ Form::label('storage', 'Soort stalling', array('class' => 'form-label')) }}
+                    <div class="radio">
+                        <label>
+                            {{ Form::radio('storage', 'Binnenstalling vorstvrij') }}
+                            Binnenstalling vorstvrij &euro; 49,50 per winter stalling seizoen*, per m<sup>2</sup>
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            {{ Form::radio('storage', 'Binnenstalling') }}
+                            Binnenstalling &euro; 39,50 per winter stalling seizoen*, per m<sup>2</sup>
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            {{ Form::radio('storage', 'Buitenstalling') }}
+                            Buitenstalling &euro; 17,50 per winter stalling seizoen*, per m<sup>2</sup>
+                        </label>
+                    </div>
+                    {{ $errors->first('storage') }}
                 </div>
                 <div class="form-group">
-                    {{ Form::text('boat_width', null, array('placeholder' => 'Breedte', 'class' => 'form-control')) }}
-                    {{ $errors->first('boat_width') }}
+                    {{ Form::label('repair_silo', 'Overige opties', array('class' => 'form-label')) }}
+                    <div class="checkbox">
+                        <label>
+                            {{ Form::checkbox('repair_silo', 1) }}
+                            Huur reparatieloods<br />
+                            Op basis van offerte duur / werkzaamheden
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            {{ Form::checkbox('home_service', 1) }}
+                            Thuisbrengservice<br />
+                            &euro; 0,50 cent per km<br />
+                            <i>(1e 50 km gratis bij vorstvrije binnen stalling)</i>
+                        </label>
+                    </div>
+                    <div class="hidden home_service">
+                        <div class="form-group">
+                            {{ Form::label('home_service_km', 'Aantal km', array('class' => 'form-label')) }}
+                            {{ Form::text('home_service_km', null, array('placeholder' => 'Aantal km', 'class' => 'form-control')) }}
+                            {{ $errors->first('home_service_km') }}
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            {{ Form::checkbox('winter_ready', 1) }}
+                            Winterklaarmaken<br />Op basis van offerte
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            {{ Form::checkbox('battery_service', 1) }}
+                            Accuservice<br />Gratis<br /><i>Exclusief levering nieuwe accu</i>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            {{ Form::checkbox('outside_motor', 1) }}
+                            Opslag buitenboordmotor<br />Gratis
+                        </label>
+                    </div>
+                    {{ $errors->first('storage') }}
                 </div>
             </div>
         </div>
