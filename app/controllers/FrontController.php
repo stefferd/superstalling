@@ -51,7 +51,7 @@ class FrontController extends BaseController {
             'message' => 'required|min:10'
         );
 
-        $pageName = 'contact';
+        $pageName = 'Contact';
         $page = Page::where('title', 'LIKE', $pageName)->first();
 
         $validator = Validator::make(Input::all(), $rules);
@@ -79,13 +79,13 @@ class FrontController extends BaseController {
     }
 
     public function offer() {
-        $pageName = 'offerte-aanvragen';
+        $pageName = 'Offerte aanvragen';
         $page = Page::where('title', 'LIKE', $pageName)->first();
         return View::make('front.pages.offer')->with(['page' => $page]);
     }
 
     public function sendOffer() {
-        $pageName = 'offerte-aanvragen';
+        $pageName = 'Offerte aanvragen';
         $page = Page::where('title', 'LIKE', $pageName)->first();
         return View::make('front.pages.offer')->with(['page' => $page, 'message' => 'Mail send successfully']);
     }
