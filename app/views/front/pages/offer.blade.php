@@ -167,9 +167,9 @@
         {{ Form::close() }}
         <script type="text/javascript">
             $('document').ready(function() {
-                $('#subtotal').html('&euro 0,00');
-                $('#btw').html('&euro 0,00');
-                $('#total').html('&euro 0,00');
+                $('#subtotal').html('€ 0,00');
+                $('#btw').html('€ 0,00');
+                $('#total').html('€ 0,00');
             });
         </script>
     @else
