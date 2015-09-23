@@ -204,8 +204,12 @@
                             price = 17.50;
                         }
                         var subtotal = Math.round((price * size) * 100) / 100;
+                        var btw = subtotal / 100 * 21;
+                        var total = subtotal + btw;
                         console.log(subtotal);
-                        $('#total').html('<strong>' + subtotal + '</strong>');
+                        $('#subtotal').html(subtotal.toFixed(2));
+                        $('#btw').html(btw.toFixed(2));
+                        $('#total').html('<strong>' + total.toFixed(2) + '</strong>');
                     }
                 };
             });
