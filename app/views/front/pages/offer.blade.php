@@ -20,35 +20,35 @@
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     {{ Form::label('name', 'Naam', array('class' => 'form-label')) }}
-                    {{ Form::text('name', null, array('placeholder' => 'Naam', 'class' => 'form-control')) }}
+                    {{ Form::text('name', Input::old('name'), array('placeholder' => 'Naam', 'class' => 'form-control')) }}
                     {{ $errors->first('name') }}
                 </div>
                 <div class="form-group">
                     {{ Form::label('address', 'Adres', array('class' => 'form-label')) }}
-                    {{ Form::text('address', null, array('placeholder' => 'Adres', 'class' => 'form-control')) }}
+                    {{ Form::text('address', Input::old('address'), array('placeholder' => 'Adres', 'class' => 'form-control')) }}
                     {{ $errors->first('address') }}
                 </div>
                 <div class="form-group">
                     {{ Form::label('zipcode', 'Postcode + woonplaats', array('class' => 'form-label')) }}
                     <div class="row">
                         <div class="col-xs-3">
-                            {{ Form::text('zipcode', null, array('placeholder' => 'Postcode', 'class' => 'form-control')) }}
+                            {{ Form::text('zipcode', Input::old('zipcode'), array('placeholder' => 'Postcode', 'class' => 'form-control')) }}
                             {{ $errors->first('zipcode') }}
                         </div>
                         <div class="col-xs-3 col-xs-offset-6">
-                            {{ Form::text('city', null, array('placeholder' => 'Plaats', 'class' => 'form-control')) }}
+                            {{ Form::text('city', Input::old('city'), array('placeholder' => 'Plaats', 'class' => 'form-control')) }}
                             {{ $errors->first('city') }}
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     {{ Form::label('phone', 'Telefoon', array('class' => 'form-label')) }}
-                    {{ Form::text('phone', null, array('placeholder' => 'Telefoon', 'class' => 'form-control')) }}
+                    {{ Form::text('phone', Input::old('phone'), array('placeholder' => 'Telefoon', 'class' => 'form-control')) }}
                     {{ $errors->first('phone') }}
                 </div>
                 <div class="form-group">
                     {{ Form::label('email', 'Email', array('class' => 'form-label')) }}
-                    {{ Form::text('email', null, array('placeholder' => 'Email', 'class' => 'form-control')) }}
+                    {{ Form::text('email', Input::old('email'), array('placeholder' => 'Email', 'class' => 'form-control')) }}
                     {{ $errors->first('email') }}
                 </div>
                 <div class="form-group">
@@ -80,19 +80,19 @@
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     {{ Form::label('boat', 'Naam van de boot', array('class' => 'form-label')) }}
-                    {{ Form::text('boat', null, array('placeholder' => 'Naam van de boot', 'class' => 'form-control')) }}
+                    {{ Form::text('boat', Input::old('boat'), array('placeholder' => 'Naam van de boot', 'class' => 'form-control')) }}
                     {{ $errors->first('boat') }}
                 </div>
                 <div class="form-group">
                     {{ Form::label('boat_length', 'Afmetingen van de boot', array('class' => 'form-label')) }}
                     <div class="row">
                         <div class="col-xs-3">
-                            {{ Form::text('boat_length', null, array('placeholder' => 'Lengte', 'class' => 'form-control length')) }}
+                            {{ Form::text('boat_length', Input::old('boat_length'), array('placeholder' => 'Lengte', 'class' => 'form-control length')) }}
                             (meter)
                             {{ $errors->first('boat_length') }}
                         </div>
                         <div class="col-xs-3 col-xs-offset-6">
-                            {{ Form::text('boat_width', null, array('placeholder' => 'Breedte', 'class' => 'form-control width')) }}
+                            {{ Form::text('boat_width', Input::old('boat_width'), array('placeholder' => 'Breedte', 'class' => 'form-control width')) }}
                             (meter)
                             {{ $errors->first('boat_width') }}
                         </div>
@@ -118,7 +118,7 @@
                     <div class="hidden home_service">
                         <div class="form-group">
                             {{ Form::label('home_service_km', 'Aantal km', array('class' => 'form-label')) }}
-                            {{ Form::text('home_service_km', null, array('placeholder' => 'Aantal km', 'class' => 'form-control')) }}
+                            {{ Form::text('home_service_km', Input::old('home_service_km'), array('placeholder' => 'Aantal km', 'class' => 'form-control')) }}
                             {{ $errors->first('home_service_km') }}
                         </div>
                     </div>
@@ -148,7 +148,7 @@
             {{ Form::label('storage_start', 'Gewenste stallingsdatum / Dagdeel', array('class' => 'form-label')) }}
             <div class="row">
                 <div class="col-xs-3">
-                    {{ Form::text('storage_start', null, array('placeholder' => 'Datum', 'class' => 'form-control datepicker')) }}
+                    {{ Form::text('storage_start', Input::old('storage_start'), array('placeholder' => 'Datum', 'class' => 'form-control datepicker')) }}
                     {{ $errors->first('storage_start') }}
                 </div>
                 <div class="col-xs-3 col-xs-offset-6">
@@ -188,7 +188,7 @@
         </div>
         <hr/>
         <div class="form-group">
-            {{ Form::textarea('remarks', null, array('placeholder' => 'Opmerkingen', 'class' => 'form-control')) }}
+            {{ Form::textarea('remarks', Input::old('remarks'), array('placeholder' => 'Opmerkingen', 'class' => 'form-control')) }}
             {{ $errors->first('remarks') }}
         </div>
         <div class="form-group">
