@@ -217,7 +217,10 @@
                         var subtotal = price * size;
                         if ($('#home_service_km').val() !== '') {
                             var homeServiceKm = $('#home_service_km').val();
-                            var freeKm = 50;
+                            var freeKm = 0;
+                            if (price === 49.50) {
+                                freeKm = 50;
+                            }
                             homeServiceKm = parseFloat(homeServiceKm.replace(',', '.'));
                             homeServiceKm = homeServiceKm - freeKm;
 
