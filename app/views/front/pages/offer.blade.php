@@ -144,6 +144,28 @@
                 </div>
             </div>
         </div>
+        <div class="form-group">
+            {{ Form::label('storage_start', 'Gewenste stallingsdatum / Dagdeel', array('class' => 'form-label')) }}
+            <div class="row">
+                <div class="col-xs-3">
+                    {{ Form::text('storage_start', null, array('placeholder' => 'Datum', 'class' => 'form-control datepicker')) }}
+                    {{ $errors->first('storage_start') }}
+                </div>
+                <div class="col-xs-3 col-xs-offset-6">
+                    {{ Form::select(
+                        'storage_period',
+                        array(
+                            'Ochtend' => 'Ochtend',
+                            'Voormiddag' => 'Voormiddag',
+                            'Namiddag' => 'Namiddag'
+                        ),
+                        array('class' => 'form-control')
+                        )
+                    }}
+                    {{ $errors->first('storage_period') }}
+                </div>
+            </div>
+        </div>
         <hr/>
         <div class="form-group">
             <div class="row">
@@ -162,6 +184,7 @@
                 <div class="col-xs-3" id="total"></div>
             </div>
         </div>
+        <hr/>
         <div class="form-group">
             {{ Form::textarea('remarks', null, array('placeholder' => 'Opmerkingen', 'class' => 'form-control')) }}
             {{ $errors->first('remarks') }}
