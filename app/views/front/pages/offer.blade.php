@@ -153,13 +153,14 @@
                 </div>
                 <div class="col-xs-3 col-xs-offset-6">
                     {{ Form::select(
-                        'storage_period',
-                        array(
-                            'Ochtend' => 'Ochtend',
-                            'Voormiddag' => 'Voormiddag',
-                            'Namiddag' => 'Namiddag'
-                        ),
-                        array('class' => 'form-control')
+                            'storage_period',
+                            array(
+                                'Ochtend' => 'Ochtend',
+                                'Voormiddag' => 'Voormiddag',
+                                'Namiddag' => 'Namiddag'
+                            ),
+                            null,
+                            array('class' => 'form-control')
                         )
                     }}
                     {{ $errors->first('storage_period') }}
