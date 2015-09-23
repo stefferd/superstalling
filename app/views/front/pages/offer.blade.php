@@ -30,13 +30,15 @@
                 </div>
                 <div class="form-group">
                     {{ Form::label('zipcode', 'Postcode + woonplaats', array('class' => 'form-label')) }}
-                    <div class="col-xs-3">
-                        {{ Form::text('zipcode', null, array('placeholder' => 'Postcode', 'class' => 'form-control')) }}
-                        {{ $errors->first('zipcode') }}
-                    </div>
-                    <div class="col-xs-3 col-xs-offset-6">
-                        {{ Form::text('city', null, array('placeholder' => 'Plaats', 'class' => 'form-control')) }}
-                        {{ $errors->first('city') }}
+                    <div class="row">
+                        <div class="col-xs-3">
+                            {{ Form::text('zipcode', null, array('placeholder' => 'Postcode', 'class' => 'form-control')) }}
+                            {{ $errors->first('zipcode') }}
+                        </div>
+                        <div class="col-xs-3 col-xs-offset-6">
+                            {{ Form::text('city', null, array('placeholder' => 'Plaats', 'class' => 'form-control')) }}
+                            {{ $errors->first('city') }}
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
