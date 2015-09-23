@@ -28,7 +28,7 @@
                             <li><a href="{{ URL::to('/stalling-en-tarieven/') }}">Stalling & tarieven</a></li>
                             <li><a href="{{ URL::to('/verhuur-klusloods/') }}">Verhuur klusloods</a></li>
                             <li><a href="{{ URL::to('/thuisbrengservice/') }}">Thuisbrengservice</a></li>
-                            <li><a href="{{ URL::to('/overige/') }}">overige</a></li>
+                            <li><a href="{{ URL::to('/overige/') }}">Overige</a></li>
                         </ul>
                     </li>
                     <li {{($page->title == 'Offerte aanvragen') ? ' class="active"' : ''}}><a href="{{ URL::to('/offerte-aanvragen/') }}">Offerte aanvragen</a></li>
