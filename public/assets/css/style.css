@@ -7725,3 +7725,7 @@ body:not(.Home) > .container {
   margin-left: 0;
   margin-right: 0;
 }
+
+.form-group .row .col-xs-3:first-child {
+  padding-left: 0;
+}

@@ -51,6 +51,31 @@
                     {{ Form::text('email', null, array('placeholder' => 'Email', 'class' => 'form-control')) }}
                     {{ $errors->first('email') }}
                 </div>
+                <div class="form-group">
+                    {{ Form::label('storage', 'Soort stalling', array('class' => 'form-label')) }}
+                    <div class="radio">
+                        <label>
+                            {{ Form::radio('storage', 'Binnenstalling vorstvrij') }}
+                            <strong>Binnenstalling vorstvrij</strong><br />
+                            &euro; 49,50 per winter stalling seizoen*, per m<sup>2</sup>
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            {{ Form::radio('storage', 'Binnenstalling') }}
+                            <strong>Binnenstalling</strong><br />
+                            &euro; 39,50 per winter stalling seizoen*, per m<sup>2</sup>
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            {{ Form::radio('storage', 'Buitenstalling') }}
+                            <strong>Buitenstalling</strong><br />
+                            &euro; 17,50 per winter stalling seizoen*, per m<sup>2</sup>
+                        </label>
+                    </div>
+                    {{ $errors->first('storage') }}
+                </div>
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
@@ -72,40 +97,18 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    {{ Form::label('storage', 'Soort stalling', array('class' => 'form-label')) }}
-                    <div class="radio">
-                        <label>
-                            {{ Form::radio('storage', 'Binnenstalling vorstvrij') }}
-                            Binnenstalling vorstvrij &euro; 49,50 per winter stalling seizoen*, per m<sup>2</sup>
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            {{ Form::radio('storage', 'Binnenstalling') }}
-                            Binnenstalling &euro; 39,50 per winter stalling seizoen*, per m<sup>2</sup>
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            {{ Form::radio('storage', 'Buitenstalling') }}
-                            Buitenstalling &euro; 17,50 per winter stalling seizoen*, per m<sup>2</sup>
-                        </label>
-                    </div>
-                    {{ $errors->first('storage') }}
-                </div>
-                <div class="form-group">
                     {{ Form::label('repair_silo', 'Overige opties', array('class' => 'form-label')) }}
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('repair_silo', 1) }}
-                            Huur reparatieloods<br />
+                            <strong>Huur reparatieloods</strong><br />
                             Op basis van offerte duur / werkzaamheden
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('home_service', 1) }}
-                            Thuisbrengservice<br />
+                            <strong>Thuisbrengservice</strong><br />
                             &euro; 0,50 cent per km<br />
                             <i>(1e 50 km gratis bij vorstvrije binnen stalling)</i>
                         </label>
@@ -120,19 +123,19 @@
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('winter_ready', 1) }}
-                            Winterklaarmaken<br />Op basis van offerte
+                            <strong>Winterklaarmaken</strong><br />Op basis van offerte
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('battery_service', 1) }}
-                            Accuservice<br />Gratis<br /><i>Exclusief levering nieuwe accu</i>
+                            <strong>Accuservice</strong><br />Gratis<br /><i>Exclusief levering nieuwe accu</i>
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('outside_motor', 1) }}
-                            Opslag buitenboordmotor<br />Gratis
+                            <strong>Opslag buitenboordmotor</strong><br />Gratis
                         </label>
                     </div>
                     {{ $errors->first('storage') }}
@@ -141,6 +144,20 @@
         </div>
         <hr />
         <div class="form-group">
+            <div class="row">
+                <div class="col-xs-3 col-xs-offset-6">Subtotaal</div>
+                <div class="col-xs-3" id="subtotal"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 col-xs-offset-6">21% BTW</div>
+                <div class="col-xs-3" id="btw"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 col-xs-offset-6">Totaal</div>
+                <div class="col-xs-3" id="total"></div>
+            </div>
+        </div>
+        <div class="form-group">
             {{ Form::textarea('remarks', null, array('placeholder' => 'Opmerkingen', 'class' => 'form-control')) }}
             {{ $errors->first('remarks') }}
         </div>
@@ -148,6 +165,13 @@
             {{ Form::button('Send', array('class' => 'btn btn-primary', 'type' => 'submit')) }} <small class="text-muted">All fields are required</small>
         </div>
         {{ Form::close() }}
+        <script type="text/javascript">
+            $('document').ready(function() {
+                $('#subtotal').html('&euro 0,00');
+                $('#btw').html('&euro 0,00');
+                $('#total').html('&euro 0,00');
+            });
+        </script>
     @else
         <div class="alert alert-success">
             <p>{{ $message }}</p>
