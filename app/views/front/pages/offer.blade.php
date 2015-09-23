@@ -195,7 +195,7 @@
 
                     if ($length.val() !== '' && $width.val() !== '' && $storage.val() !== '') {
                         console.log($length.val(), $width.val(), $storage.val());
-                        var size = parseFloat($length.val()) * parseFloat($width.val());
+                        var size = parseFloat($length.val().replace(',', '.')) * parseFloat($width.val().replace(',', '.'));
                         var price = 49.50;
                         if ($storage.val() === 'Binnenstalling') {
                             price = 39.50;
