@@ -187,7 +187,8 @@
                     calculatePrice();
                 });
 
-                $('input[name="home_service"]').on('click', function() {
+                $('input[name=home_service]').on('click', function() {
+                    debugger;
                    var $this = $(this);
                     if ($this.val() === 1) {
                         $('.home_service_km').removeClass('hidden');
