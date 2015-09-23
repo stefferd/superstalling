@@ -87,11 +87,11 @@
                     {{ Form::label('boat_length', 'Afmetingen van de boot', array('class' => 'form-label')) }}
                     <div class="row">
                         <div class="col-xs-3">
-                            {{ Form::text('boat_length', null, array('placeholder' => 'Lengte', 'class' => 'form-control')) }}
+                            {{ Form::text('boat_length', null, array('placeholder' => 'Lengte', 'class' => 'form-control')) }} (meter)
                             {{ $errors->first('boat_length') }}
                         </div>
                         <div class="col-xs-3 col-xs-offset-6">
-                            {{ Form::text('boat_width', null, array('placeholder' => 'Breedte', 'class' => 'form-control')) }}
+                            {{ Form::text('boat_width', null, array('placeholder' => 'Breedte', 'class' => 'form-control')) }} (meter)
                             {{ $errors->first('boat_width') }}
                         </div>
                     </div>
@@ -145,15 +145,18 @@
         <hr />
         <div class="form-group">
             <div class="row">
-                <div class="col-xs-3 col-xs-offset-6">Subtotaal</div>
+                <div class="col-xs-3">Subtotaal</div>
+                <div class="col-xs-1">&euro;</div>
                 <div class="col-xs-3" id="subtotal"></div>
             </div>
             <div class="row">
-                <div class="col-xs-3 col-xs-offset-6">21% BTW</div>
+                <div class="col-xs-3">21% BTW</div>
+                <div class="col-xs-1">&euro;</div>
                 <div class="col-xs-3" id="btw"></div>
             </div>
             <div class="row">
-                <div class="col-xs-3 col-xs-offset-6">Totaal</div>
+                <div class="col-xs-3"><strong>Totaal</strong></div>
+                <div class="col-xs-1"><strong>&euro;</strong></div>
                 <div class="col-xs-3" id="total"></div>
             </div>
         </div>
@@ -167,9 +170,9 @@
         {{ Form::close() }}
         <script type="text/javascript">
             $('document').ready(function() {
-                $('#subtotal').html('€ 0,00');
-                $('#btw').html('€ 0,00');
-                $('#total').html('€ 0,00');
+                $('#subtotal').html('0,00');
+                $('#btw').html('0,00');
+                $('#total').html('<strong>0,00</strong>');
             });
         </script>
     @else
