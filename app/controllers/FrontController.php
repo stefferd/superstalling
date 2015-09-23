@@ -94,6 +94,7 @@ class FrontController extends BaseController {
             'zipcode' => 'required|min:3',
             'city' => 'required|min:3',
             'email' => 'required|min:3',
+            'phone' => 'required|min:3',
             'boat_length' => 'required|min:1',
             'boat_width' => 'required|min:1',
             'storage' => 'required|min:3',
