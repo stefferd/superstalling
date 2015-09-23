@@ -187,26 +187,49 @@
                     calculatePrice();
                 });
 
+                $('#home_service').on('change', function() {
+                   var $this = $(this);
+                    if ($this.val() === 1) {
+                        $('.home_service_km').removeClass('hidden');
+                    } else {
+                        $('.home_service_km').addClass('hidden');
+                    }
+                });
+
+                $('#home_service_km').on('change', function() {
+                    calculatePrice();
+                });
+
                 var calculatePrice = function () {
-                    console.log('calculatePrice');
                     var $length = $('.length');
                     var $width = $('.width');
                     var $storage = $('#storage');
 
                     if ($length.val() !== '' && $width.val() !== '' && $storage.val() !== '') {
-                        console.log($length.val(), $width.val(), $storage.val());
                         var size = parseFloat($length.val().replace(',', '.')) * parseFloat($width.val().replace(',', '.'));
-                        console.log(size);
                         var price = 49.50;
                         if ($storage.val() === 'Binnenstalling') {
                             price = 39.50;
                         } else if ($storage.val() === 'Buitenstalling') {
                             price = 17.50;
                         }
-                        var subtotal = Math.round((price * size) * 100) / 100;
+
+                        var subtotal = price * size;
+                        if ($('#home_service_km').val() !== '') {
+                            var homeServiceKm = $('#home_service_km').val();
+                            var freeKm = 50;
+                            homeServiceKm = parseFloat(homeServiceKm.replace(',', '.'));
+                            homeServiceKm = homeServiceKm - freeKm;
+
+                            if (homeServiceKm > 0) {
+                                subtotal = subtotal + (homeServiceKm * 0.50);
+                            }
+                        }
+
                         var btw = subtotal / 100 * 21;
                         var total = subtotal + btw;
-                        console.log(subtotal);
+                        subtotal = Math.round(subtotal * 100) / 100;
+
                         $('#subtotal').html(subtotal.toFixed(2));
                         $('#btw').html(btw.toFixed(2));
                         $('#total').html('<strong>' + total.toFixed(2) + '</strong>');
