@@ -27,9 +27,6 @@
         </div>
     </div>
 </footer>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ URL::asset('assets/js/sass-bootstrap.min.js') }}"></script>
 <script>

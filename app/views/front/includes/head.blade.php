@@ -11,3 +11,5 @@
 <meta property="og:description"  content="{{ Config::get('statics.customer') }} | @yield('description')" />
 <meta property="og:site_name" content="{{ Config::get('statics.customer_url') }}" />
 <meta property="og:url" content="http://www.superstalling.nl/{{ str_replace(' ', '-', strtolower($page->title)) }}" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
