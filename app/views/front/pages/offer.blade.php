@@ -10,8 +10,8 @@
 
 @section('content')
     <ol class="breadcrumb">
-      <li><a href="/" title="Superstalling">Home</a></li>
-      <li class="active">{{ $page->title }}</li>
+        <li><a href="/" title="Superstalling">Home</a></li>
+        <li class="active">{{ $page->title }}</li>
     </ol>
     {{ $page->content }}
     @if (!isset($message))
@@ -56,21 +56,21 @@
                     <div class="radio">
                         <label>
                             {{ Form::radio('storage', 'Binnenstalling vorstvrij') }}
-                            <strong>Binnenstalling vorstvrij</strong><br />
+                            <strong>Binnenstalling vorstvrij</strong><br/>
                             &euro; 49,50 per winter stalling seizoen*, per m<sup>2</sup>
                         </label>
                     </div>
                     <div class="radio">
                         <label>
                             {{ Form::radio('storage', 'Binnenstalling') }}
-                            <strong>Binnenstalling</strong><br />
+                            <strong>Binnenstalling</strong><br/>
                             &euro; 39,50 per winter stalling seizoen*, per m<sup>2</sup>
                         </label>
                     </div>
                     <div class="radio">
                         <label>
                             {{ Form::radio('storage', 'Buitenstalling') }}
-                            <strong>Buitenstalling</strong><br />
+                            <strong>Buitenstalling</strong><br/>
                             &euro; 17,50 per winter stalling seizoen*, per m<sup>2</sup>
                         </label>
                     </div>
@@ -87,11 +87,13 @@
                     {{ Form::label('boat_length', 'Afmetingen van de boot', array('class' => 'form-label')) }}
                     <div class="row">
                         <div class="col-xs-3">
-                            {{ Form::text('boat_length', null, array('placeholder' => 'Lengte', 'class' => 'form-control')) }} (meter)
+                            {{ Form::text('boat_length', null, array('placeholder' => 'Lengte', 'class' => 'form-control length')) }}
+                            (meter)
                             {{ $errors->first('boat_length') }}
                         </div>
                         <div class="col-xs-3 col-xs-offset-6">
-                            {{ Form::text('boat_width', null, array('placeholder' => 'Breedte', 'class' => 'form-control')) }} (meter)
+                            {{ Form::text('boat_width', null, array('placeholder' => 'Breedte', 'class' => 'form-control width')) }}
+                            (meter)
                             {{ $errors->first('boat_width') }}
                         </div>
                     </div>
@@ -101,15 +103,15 @@
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('repair_silo', 1) }}
-                            <strong>Huur reparatieloods</strong><br />
+                            <strong>Huur reparatieloods</strong><br/>
                             Op basis van offerte duur / werkzaamheden
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('home_service', 1) }}
-                            <strong>Thuisbrengservice</strong><br />
-                            &euro; 0,50 cent per km<br />
+                            <strong>Thuisbrengservice</strong><br/>
+                            &euro; 0,50 cent per km<br/>
                             <i>(1e 50 km gratis bij vorstvrije binnen stalling)</i>
                         </label>
                     </div>
@@ -123,26 +125,26 @@
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('winter_ready', 1) }}
-                            <strong>Winterklaarmaken</strong><br />Op basis van offerte
+                            <strong>Winterklaarmaken</strong><br/>Op basis van offerte
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('battery_service', 1) }}
-                            <strong>Accuservice</strong><br />Gratis<br /><i>Exclusief levering nieuwe accu</i>
+                            <strong>Accuservice</strong><br/>Gratis<br/><i>Exclusief levering nieuwe accu</i>
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
                             {{ Form::checkbox('outside_motor', 1) }}
-                            <strong>Opslag buitenboordmotor</strong><br />Gratis
+                            <strong>Opslag buitenboordmotor</strong><br/>Gratis
                         </label>
                     </div>
                     {{ $errors->first('storage') }}
                 </div>
             </div>
         </div>
-        <hr />
+        <hr/>
         <div class="form-group">
             <div class="row">
                 <div class="col-xs-3">Subtotaal</div>
@@ -165,14 +167,35 @@
             {{ $errors->first('remarks') }}
         </div>
         <div class="form-group">
-            {{ Form::button('Send', array('class' => 'btn btn-primary', 'type' => 'submit')) }} <small class="text-muted">All fields are required</small>
+            {{ Form::button('Send', array('class' => 'btn btn-primary', 'type' => 'submit')) }}
+            <small class="text-muted">All fields are required</small>
         </div>
         {{ Form::close() }}
         <script type="text/javascript">
-            $('document').ready(function() {
+            $('document').ready(function () {
                 $('#subtotal').html('0,00');
                 $('#btw').html('0,00');
                 $('#total').html('<strong>0,00</strong>');
+
+                $('.length').on('change', calculatePrice);
+
+                var calculatePrice = function () {
+                    var $length = $('.length');
+                    var $width = $('.width');
+                    var $storage = $('#storage');
+
+                    if ($length.val() !== '' && $width.val() !== '' && $storage.val() !== '') {
+                        var size = parseFloat($length.val()) * parseFloat($width.val());
+                        var price = 49.50;
+                        if ($storage.val() === 'Binnenstalling') {
+                            price = 39.50;
+                        } else if ($storage.val() === 'Buitenstalling') {
+                            price = 17.50;
+                        }
+                        var subtotal = Math.round((price * size) * 100) / 100;
+                        $('#total').html('<strong>' + subtotal + '</strong>');
+                    }
+                };
             });
         </script>
     @else
