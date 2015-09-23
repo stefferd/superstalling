@@ -13,7 +13,7 @@
         <li><a href="/" title="Superstalling">Home</a></li>
         <li class="active">{{ $page->title }}</li>
     </ol>
-    {{ $page->content }}
+    <p>{{ $page->content }}</p>
     @if (!isset($message))
         {{ Form::open(array('route' => array('front.sendOffer'))) }}
         <div class="row">
@@ -167,6 +167,7 @@
                 </div>
             </div>
         </div>
+        {{ Form::hidden('total', 0.00) }}
         <hr/>
         <div class="form-group">
             <div class="row">
@@ -191,8 +192,8 @@
             {{ $errors->first('remarks') }}
         </div>
         <div class="form-group">
-            {{ Form::button('Send', array('class' => 'btn btn-primary', 'type' => 'submit')) }}
-            <small class="text-muted">All fields are required</small>
+            {{ Form::button('Offerte aanvragen', array('class' => 'btn btn-primary', 'type' => 'submit')) }}
+            <small class="text-muted">Alle velden zijn verplicht</small>
         </div>
         {{ Form::close() }}
         <script type="text/javascript">
@@ -260,6 +261,7 @@
                         $('#subtotal').html(subtotal.toFixed(2));
                         $('#btw').html(btw.toFixed(2));
                         $('#total').html('<strong>' + total.toFixed(2) + '</strong>');
+                        $('input[name=total]').val(total.toFixed(2));
                     }
                 };
             });
