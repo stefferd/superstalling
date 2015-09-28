@@ -5992,6 +5992,21 @@ img {
   max-width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar-inverse .navbar-collapse,
+  .navbar-inverse .navbar-collapse:before,
+  .navbar-inverse .navbar-collapse:after {
+    background: -webkit-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
+    background: -moz-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
+    background: -ms-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
+    background: linear-gradient(#2e3a58, #1c2437 140px, #ffffff 140px, #ffffff 100%);
+  }
+
+  footer {
+    padding: 10px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   /* line 27, ../sass/_main.scss */
   .navbar-inverse {
@@ -6009,6 +6024,7 @@ img {
     background: -ms-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
     background: linear-gradient(#2e3a58, #1c2437 140px, #ffffff 140px, #ffffff 100%);
   }
+
 
   .navbar-inverse .navbar-nav > .active > a {
     color: #868B94;
@@ -6052,7 +6068,7 @@ img {
 .navbar-nav {
   float: none;
 }
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {*/
   /* line 65, ../sass/_main.scss */
   .navbar-nav {
     text-align: center;
@@ -6085,7 +6101,7 @@ img {
   .navbar-nav > li > a:hover {
     background-position: 0 100%;
   }
-}
+/*}*/
 
 @media screen and (min-width: 768px) {
   /* line 97, ../sass/_main.scss */
