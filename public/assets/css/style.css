@@ -3753,7 +3753,7 @@ input[type="button"].btn-block {
 /* line 64, ../sass/_dropdowns.scss */
 .dropdown-menu > li > a {
   display: block;
-  padding: 10px 5px;
+  padding: 10px 15px;
   text-align: left;
   clear: both;
   font-size: 15px;
@@ -6107,7 +6107,7 @@ img {
   position: relative;
   top: -100px;
   margin-bottom: -100px;
-  padding: 30px;
+  padding: 25px;
   padding-bottom: 60px;
 }
 
@@ -6168,6 +6168,7 @@ footer {
   background: #000;
   background: #1d2a4a;
   color: #fff;
+  font-size: 12px;
 }
 /* line 174, ../sass/_main.scss */
 footer .container {
