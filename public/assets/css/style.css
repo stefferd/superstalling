@@ -5996,10 +5996,8 @@ img {
   .navbar-inverse .navbar-collapse,
   .navbar-inverse .navbar-collapse:before,
   .navbar-inverse .navbar-collapse:after {
-    background: -webkit-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
-    background: -moz-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
-    background: -ms-linear-gradient(#2e3a58, #1c2437 140px, white 140px, white 100%);
-    background: linear-gradient(#2e3a58, #1c2437 140px, #ffffff 140px, #ffffff 100%);
+    background: #1c2437;
+    overflow: hidden;
   }
 
   .navbar-nav > li {
