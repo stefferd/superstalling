@@ -6002,6 +6002,11 @@ img {
     background: linear-gradient(#2e3a58, #1c2437 140px, #ffffff 140px, #ffffff 100%);
   }
 
+  .navbar-nav > li {
+    width: 100%;
+    display: block;
+  }
+
   footer {
     padding: 10px;
   }
