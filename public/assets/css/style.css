@@ -6044,7 +6044,7 @@ img {
     float: none;
     text-align: center;
     text-indent: -999em;
-    background: url(../img/logo.png) no-repeat 50% 50%/contain;
+    background: url(../img/logo-superstalling.png) no-repeat 50% 50%/contain;
   }
 }
 
@@ -6090,7 +6090,7 @@ img {
 @media screen and (min-width: 768px) {
   /* line 97, ../sass/_main.scss */
   .carousel {
-    border-top: 20px solid #FFF;
+    border-top: 25px solid #FFF;
     margin-top: 190px;
   }
 }
